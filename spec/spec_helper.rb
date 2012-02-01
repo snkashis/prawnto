@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'spork'
 
+raise Gem.loaded_specs["prawn"].version.to_s.inspect
 Spork.prefork do
   # Configure Rails Environment
   ENV["RAILS_ENV"] = "test"
