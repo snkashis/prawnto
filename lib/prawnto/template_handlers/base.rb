@@ -8,7 +8,7 @@ module Prawnto
 
         "_prawnto_compile_setup;" +
         "renderer = Prawnto::TemplateHandlers::Renderer.new(self);"+
-        "renderer.to_pdf do; #{template.source}\nend;"
+        "renderer.to_pdf(self) do; #{template.source}\nend;"
       end
 
     private

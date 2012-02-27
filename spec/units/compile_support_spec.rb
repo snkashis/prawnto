@@ -1,7 +1,7 @@
-require File.expand_path("../spec_helper.rb", File.dirname(__FILE__))
+require "spec_helper"
 
 describe Prawnto::CompileSupport do
-  
+
   before do
     @request = mock()
     @request.stubs(:ssl?).returns(false)
@@ -18,7 +18,7 @@ describe Prawnto::CompileSupport do
       Prawnto::CompileSupport.any_instance.stubs(:set_cache_control).returns(true)
       Prawnto::CompileSupport.any_instance.stubs(:set_content_type).returns(Mime::PDF)
     end
-    
+
     it "default" do
       @headers.expects("[]=").with("Content-Disposition", "inline").once
       Prawnto::CompileSupport.new(@controller)
@@ -29,7 +29,7 @@ describe Prawnto::CompileSupport do
       @headers.expects("[]=").with("Content-Disposition", "inline;filename=\"xxx.pdf\"").once
       Prawnto::CompileSupport.new(@controller)
     end
-    
+
     it "attachment with filename" do
       @controller.stubs(:compute_prawnto_options).returns({:filename => "xxx.pdf", :inline => false})
       @headers.expects("[]=").with("Content-Disposition", "attachment;filename=\"xxx.pdf\"").once
@@ -37,11 +37,11 @@ describe Prawnto::CompileSupport do
     end
 
   end
-  
+
   describe "#set_pragma" do
     pending
   end
-  
+
   describe "#set_cache_control" do
     pending
   end

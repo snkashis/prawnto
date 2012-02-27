@@ -7,3 +7,7 @@ gem "spork", ">= 0.9.0"
 gem "rspec-rails"
 gem "mocha"
 gem "appraisal"
+
+gem "guard"
+gem "guard-spork"
+gem "guard-rspec"

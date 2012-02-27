@@ -1,6 +1,10 @@
+require "prawnto/template_handlers/partials"
+
 module Prawnto
   module TemplateHandlers
     class Renderer
+      include Partials
+
       def initialize(view_context, calling_object = nil)
         @view_context = view_context
         @calling_object = calling_object
@@ -8,7 +12,8 @@ module Prawnto
         @pdf = Prawn::Document.new(@prawnto_options[:prawn]);
       end
 
-      def to_pdf(&block)
+      def to_pdf(scope = false, &block)
+        @_scope = scope
         instance_eval(&block)
         @pdf.render.html_safe
       end
