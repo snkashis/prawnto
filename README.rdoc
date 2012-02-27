@@ -19,15 +19,15 @@ In your <code>Gemfile</code>:
   gem "prawnto_2", :require => "prawnto"
 
 Then run:
-  
+
   bundle install
 
 Now make a view:
 
   <action name>.pdf.prawn
- 
+
 ---
-  
+
 = Usage
 
 More Details will be coming to {wiki}[http://github.com/forrest/prawnto/wiki].
@@ -35,11 +35,11 @@ More Details will be coming to {wiki}[http://github.com/forrest/prawnto/wiki].
 === As View in Controller
 
 Simply create additional views that end with <code>.pdf.prawn</code> and rails will use the Prawnto template handler to render it properly. The beta has combined the regular <code>.prawn</code> and <code>.prawn_dsl</code> extensions. Now you won't get tired of typing <code>pdf.method</code>, but instance variables get used. There are a number of options available which are detailed in the wiki (or will be soon).
-  
+
 === As Attachment to Email
 
 You can render PDF's as an attachment to an email very simply with Prawnto.
-  
+
   class PdfEmailer < ActionMailer::Base
     default from: "from@example.com"
 
@@ -82,10 +82,10 @@ While layouts and partials aren't yet supported, helper methods can be called fr
 
 prawnto uses appraisal to run tests for different versions of prawn. In order to
 run the specs you first need to install the dependencies for each appraisal:
-  
+
   rake appraisal:install
 
-Then you can run the tests for a specifc version of prawn (only 0.12.0 and 
+Then you can run the tests for a specifc version of prawn (only 0.12.0 and
 0.6.3, but you can add your own version) or all versions:
 
   rake appraisal:prawn0.12.0 spec

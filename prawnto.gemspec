@@ -1,4 +1,3 @@
-
 Gem::Specification.new do |s|
   s.name = "prawnto_2"
   s.version = '0.2.3'

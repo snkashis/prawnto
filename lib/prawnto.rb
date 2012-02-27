@@ -11,11 +11,11 @@ module Prawnto
 
   module TemplateHandlers
     autoload :Renderer, 'prawnto/template_handlers/renderer'
-    
+
     autoload :Base, 'prawnto/template_handlers/base'
     autoload :Dsl, 'prawnto/template_handlers/dsl'
   end
-  
+
   autoload :ModelRenderer, 'prawnto/model_renderer'
-  
+
 end

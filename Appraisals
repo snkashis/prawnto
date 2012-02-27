@@ -4,4 +4,4 @@ end
 
 appraise "prawn0.6.3" do
   gem "prawn", '0.6.3'
-end 
+end

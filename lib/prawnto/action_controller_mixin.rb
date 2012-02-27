@@ -1,7 +1,7 @@
 module Prawnto
   module ActionControllerMixin
     DEFAULT_PRAWNTO_OPTIONS = {:inline=>true}
-  
+
     def self.included(base)
       base.send :attr_reader, :prawnto_options
       base.class_attribute :prawn_hash, :prawnto_hash
@@ -11,14 +11,14 @@ module Prawnto
     end
 
     module ClassMethods
-    
+
       # This is the class setter. It lets you set default options for all prawn actions within a controller.
       def prawnto(options)
         prawn_options, prawnto_options = breakdown_prawnto_options options
         self.prawn_hash = prawn_options
         self.prawnto_hash = DEFAULT_PRAWNTO_OPTIONS.dup.merge(prawnto_options)
       end
-  
+
     private
 
       # splits the :prawn key out into a seperate hash
@@ -28,7 +28,7 @@ module Prawnto
         [prawn_options, prawnto_options]
       end
     end
-  
+
     # Sets the prawn options. Use in the controller method.
     #
     # respond_to {|format|
