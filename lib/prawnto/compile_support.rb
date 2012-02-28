@@ -13,7 +13,7 @@ module Prawnto
     end
 
     def set_headers
-      unless defined?(ActionMailer) && defined?(ActionMailer::Base) && @controller.is_a?(ActionMailer::Base)
+      unless defined?(ActionMailer) && defined?(ActionMailer::Base) && @controller.is_a?(ActionMailer::Base) || @controller.is_a?(ActionView::TestCase::TestController)
         set_pragma
         set_cache_control
         set_content_type
