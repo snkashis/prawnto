@@ -2,6 +2,10 @@ module Prawnto
   module TemplateHandlers
     module Partials
 
+      # Can be called within a prawn template to render a partial below it.
+      # :partial_name - current has to be the entire path from the views folder. Doesn't recognize the folder of the current template
+      # :prawn_object - defaults to the pdf document, but can take a paramenter to render within a prawn object. This is good for
+      #                 items like tables, text_blocks, etc.
       def partial!(partial_name, prawn_object = pdf)
         prawn_object.instance_eval partial_source(partial_name)
       end
