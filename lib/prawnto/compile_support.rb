@@ -13,13 +13,21 @@ module Prawnto
     end
 
     def set_headers
-      unless defined?(ActionMailer) && defined?(ActionMailer::Base) && @controller.is_a?(ActionMailer::Base) || @controller.is_a?(ActionView::TestCase::TestController)
+      if not called_from_view_spec? and not called_from_mailer?
         set_pragma
         set_cache_control
         set_content_type
         set_disposition
         set_other_headers_for_ie_ssl
       end
+    end
+
+    def called_from_mailer?
+      defined?(ActionMailer) && defined?(ActionMailer::Base) && @controller.is_a?(ActionMailer::Base)
+    end
+
+    def called_from_view_spec?
+      defined?(ActionView::TestCase) && defined?(ActionView::TestCase::TestController) && @controller.is_a?(ActionView::TestCase::TestController)
     end
 
     def ie_request?
