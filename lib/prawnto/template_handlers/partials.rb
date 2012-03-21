@@ -34,6 +34,7 @@ module Prawnto
 
       def cleaned_path(provided_partial_path)
         if (RUBY_VERSION > "1.8.7")
+          # This eval avoids the syntax error in 1.8.7
           eval('*provided_path, file_name = provided_partial_path.split("/")')
         else
           splitted_provided_partial_path = provided_partial_path.split("/")
@@ -41,8 +42,8 @@ module Prawnto
           file_name = splitted_provided_partial_path.last
         end
 
-        file_name = "_"+file_name unless file_name[0] == "_"
-        File.join(provided_path, file_name)
+        file_name = "_"+file_name unless file_name[0].chr == "_"
+        File.join(provided_path, [file_name])
       end
 
     end
