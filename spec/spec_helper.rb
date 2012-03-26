@@ -28,5 +28,6 @@ end
 # "/path/to/prawnto/spec/assets/default_render-#{prawn version}.pdf"
 def asset_path(file)
   prawn_version = Gem.loaded_specs["prawn"].version.to_s.inspect
-  TEST_ASSETS + "/#{file}-#{prawn_version.gsub('"','')}.pdf"
+  ruby_version_folder = RUBY_VERSION.split(".")[0..1].join(".")
+  TEST_ASSETS + "/#{ruby_version_folder}/#{file}-#{prawn_version.gsub('"','')}.pdf"
 end
