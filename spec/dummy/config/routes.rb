@@ -4,6 +4,5 @@ Rails.application.routes.draw do
   get "/dsl_render" => "test#dsl_render"
   get "/instance_var_test" => "test#instance_var_test"
   get "/yield_block_in_helper_test" => "test#yield_block_in_helper_test"
-
-  root :to => "test#default_render"
+  get "/filename_test" => "test#filename_test"
 end

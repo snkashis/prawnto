@@ -24,4 +24,9 @@ class TestController < ApplicationController
     render :action => "partial_render"
   end
 
+  def filename_test
+    prawnto :filename => "fancy_name.pdf", :inline => false
+    render :action => "default_render"
+  end
+
 end

@@ -48,4 +48,13 @@ describe TestController do
     end
   end
 
+  describe "complex headers" do
+    it "should return a file with a specified filename" do
+      get "/filename_test.pdf"
+      response.should be_success
+      response.header["Content-Disposition"].should == "attachment;filename=\"fancy_name.pdf\""
+    end
+
+  end
+
 end
