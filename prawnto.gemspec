@@ -1,8 +1,8 @@
 Gem::Specification.new do |s|
   s.name = "prawnto_2"
-  s.version = '0.2.5'
-  s.author = ["Forrest"]
-  s.email = ["development@forrestzeisler.com"]
+  s.version = '0.2.6'
+  s.author = ["Jobber", "Forrest Zeisler", "Nathan Youngman"]
+  s.email = ["forrest@getjobber.com"]
   s.date = Time.now.utc.strftime("%Y-%m-%d")
 
   s.description = 'Simple PDF generation using the prawn library.'
