@@ -16,3 +16,4 @@ gem "appraisal"
 gem "guard"
 gem "guard-spork"
 gem "guard-rspec"
+gem 'rb-fsevent', '~> 0.9'

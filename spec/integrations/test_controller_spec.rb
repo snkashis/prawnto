@@ -14,7 +14,7 @@ describe TestController, :type => :controller do
 
 
     it "shares values/changes of instance vars between view and helpers" do
-      expect { get "/instance_var_test.pdf" }.should_not raise_error
+      expect { get "/instance_var_test.pdf" }.to_not raise_error
     end
 
     it "should render items in a block passed to a helper" do
