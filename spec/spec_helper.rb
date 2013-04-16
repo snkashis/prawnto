@@ -7,6 +7,7 @@ Spork.prefork do
 
   require File.expand_path("../dummy/config/environment.rb",  __FILE__)
   require 'rspec/rails'
+  require "mocha"
 
   Rails.backtrace_cleaner.remove_silencers!
 

@@ -1,6 +1,6 @@
-require File.expand_path("../spec_helper.rb", File.dirname(__FILE__))
+require "spec_helper"
 
-describe TestController do
+describe TestController, :type => :controller do
 
   describe "simple" do
     it "returns correct PDF" do
