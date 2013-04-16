@@ -19,3 +19,4 @@ module Prawnto
   autoload :ModelRenderer, 'prawnto/model_renderer'
 
 end
+
