@@ -87,12 +87,10 @@ run the specs you first need to install the dependencies for each appraisal:
 
   rake appraisal:install
 
-Then you can run the tests for a specifc version of prawn (only 0.12.0 and
-0.6.3, but you can add your own version) or all versions:
+Then you can run the tests for a specifc version of rails:
 
-  rake appraisal:prawn0.12.0 spec
-  rake appraisal:prawn0.6.3 spec
-  rake appraisal spec # all versions
+  rake appraisal:rails3
+  rake appraisal:rails4
 
 = Contributing & Reporting Issues
 

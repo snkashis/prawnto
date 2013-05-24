@@ -3,7 +3,7 @@ source "http://rubygems.org"
 # Specify your gem's dependencies in my_project.gemspec
 gemspec
 
-gem "rails", "3.2.11"
+gem "rails", "3.2.12"
 
 gem "spork"
 gem "rspec", "2.11.0"
