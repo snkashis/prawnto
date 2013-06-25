@@ -1,28 +1,21 @@
 require 'rubygems'
-require 'spork'
 
-Spork.prefork do
-  # Configure Rails Environment
-  ENV["RAILS_ENV"] = "test"
+# Configure Rails Environment
+ENV["RAILS_ENV"] = "test"
 
-  require File.expand_path("../dummy/config/environment.rb",  __FILE__)
-  require 'rspec/rails'
-  require "mocha"
+require File.expand_path("../dummy/config/environment.rb",  __FILE__)
+require 'rspec/rails'
+require "mocha/setup"
 
-  Rails.backtrace_cleaner.remove_silencers!
+Rails.backtrace_cleaner.remove_silencers!
 
-  RSpec.configure do |config|
-    config.mock_with :mocha
+RSpec.configure do |config|
+  config.mock_with :mocha
 
-    config.infer_base_class_for_anonymous_controllers = false
-  end
-
-  TEST_ASSETS = File.expand_path("assets", File.dirname(__FILE__)).to_s
+  config.infer_base_class_for_anonymous_controllers = false
 end
 
-Spork.each_run do
-  # This code will be run each time you run your specs.
-end
+TEST_ASSETS = File.expand_path("assets", File.dirname(__FILE__)).to_s
 
 # Helper to provide asset path given the "base name" of the file.
 # For example, if +file+ is "default_render", asset_path returns

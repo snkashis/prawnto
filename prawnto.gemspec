@@ -14,6 +14,10 @@ Gem::Specification.new do |s|
   s.add_dependency('prawn', '>= 1.0.0.rc2')
   # s.add_dependency('prawn', '>= 0.12.0')
 
+  s.add_development_dependency "appraisal"
+  s.add_development_dependency "rspec-rails", "2.13.2"
+  s.add_development_dependency "mocha", "0.14.0"
+
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_path  = "lib"
