@@ -80,24 +80,6 @@ Helper methods can be called from within the PDF views. To help keep PDF's DRY, 
 
 Limited partial support is available. Check out the wiki for details.
 
-== Testing
-
-prawnto uses appraisal to run tests for different versions of prawn. In order to
-run the specs you first need to install the dependencies for each appraisal:
-
-  rake appraisal:install
-
-Then you can run the tests for a specifc version of rails:
-
-  rake appraisal:rails3
-  rake appraisal:rails4
-
-= Contributing & Reporting Issues
-
-Obviously, all code contributions are greatly appreciated. We also need help with testing and the wiki.
-
-While I can't promise the most speedy response, I do plan to continue to maintain this gem. Please feel free to report any issues, provide feedback, or make suggestions on the {Issue Tracker}[http://github.com/getjobber/prawnto/issues]
-
 ---
 
 
