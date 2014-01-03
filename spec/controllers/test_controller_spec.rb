@@ -1,24 +1,25 @@
 require "spec_helper"
 
-describe TestController, :type => :controller do
+describe TestController do
+  render_views
 
   describe "simple" do
     it "returns correct PDF" do
-      get "/default_render.pdf"
-      response.should be_success
+      get :default_render, :format => :pdf
+      expect(response).to be_success
 
       asset_binary = File.open(asset_path("default_render")).read.bytes.to_a
       body_binary = response.body.bytes.to_a
-      body_binary.should == asset_binary
+      expect(body_binary).to eq(asset_binary)
     end
 
 
     it "shares values/changes of instance vars between view and helpers" do
-      expect { get "/instance_var_test.pdf" }.to_not raise_error
+      expect { get :instance_var_test, :format => :pdf }.to_not raise_error
     end
 
     it "should render items in a block passed to a helper" do
-      get "/yield_block_in_helper_test.pdf"
+      get :yield_block_in_helper_test, :format => :pdf
       asset_binary = File.open(asset_path("yield_block_in_helper_test")).read.bytes.to_a
       body_binary = response.body.bytes.to_a
       body_binary.should == asset_binary
@@ -28,7 +29,7 @@ describe TestController, :type => :controller do
 
   describe "dsl" do
     it "returns correct PDF" do
-      get "/dsl_render.pdf"
+      get :dsl_render, :format => :pdf
       response.should be_success
 
       asset_binary = File.open(asset_path("dsl_render")).read.bytes.to_a
@@ -39,7 +40,7 @@ describe TestController, :type => :controller do
 
   describe "partials" do
     it "renders partials" do
-      get "/partial_render.pdf"
+      get :partial_render, :format => :pdf
       response.should be_success
 
       asset_binary = File.open(asset_path("partial_render")).read.bytes.to_a
@@ -50,7 +51,7 @@ describe TestController, :type => :controller do
 
   describe "complex headers" do
     it "should return a file with a specified filename" do
-      get "/filename_test.pdf"
+      get :filename_test, :format => :pdf
       response.should be_success
       response.header["Content-Disposition"].should == "attachment;filename=\"fancy_name.pdf\""
     end
