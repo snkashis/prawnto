@@ -1,7 +1,4 @@
 source "https://rubygems.org"
-gemspec
-
-gem "guard"
-gem "guard-rspec"
+gemspec :path => "./../.."
 
 gem "rails", "3.2.16"

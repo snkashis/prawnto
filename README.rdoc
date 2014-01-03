@@ -83,6 +83,17 @@ Limited partial support is available. Check out the wiki for details.
 ---
 
 
-Copyright on Updates - Copyright (c) 2013 OctopusApp Inc. ({getjobber.com}[http://getjobber.com]), released under the MIT license
+== Testing & Development
+
+Tests can be ran against different versions of Rails like so:
+
+<code>
+BUNDLE_GEMFILE=spec/gemfiles/Gemfile.rails-3.2.x bundle install
+BUNDLE_GEMFILE=spec/gemfiles/Gemfile.rails-3.2.x bundle exec rake spec
+</code>
+
+---
+
+Copyright on Updates - Copyright (c) 2014 OctopusApp Inc. ({getjobber.com}[http://getjobber.com]), released under the MIT license
 
 Original Copyright - Copyright (c) 2008 cracklabs.com, released under the MIT license

@@ -6,8 +6,6 @@ require 'rake/testtask'
 require 'rdoc/task'
 require 'rubygems/package_task'
 
-require 'appraisal'
-
 desc 'Generate documentation for the prawnto plugin.'
 RDoc::Task.new do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
