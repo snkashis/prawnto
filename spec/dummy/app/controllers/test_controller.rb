@@ -1,5 +1,9 @@
 class TestController < ApplicationController
 
+  def index
+    render
+  end
+
   def default_render
     @x = 1
     render :action => "default_render"
