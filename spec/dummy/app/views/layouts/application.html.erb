@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>Dummy</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
+  <%#= stylesheet_link_tag    "application" %>
+  <%#= javascript_include_tag "application" %>
 
 	<%= yield :extra_scripts_and_styles %>
 
@@ -15,7 +15,7 @@
 		<% flash.each do |name, msg| %>
       <%= content_tag :div, msg, :id => "flash_#{name}", :class => "flash clearfix hide_for_print" %>
     <% end %>
-		
+
 		<%= yield %>
 	</div>
 

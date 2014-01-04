@@ -1,8 +1,10 @@
+*.gem
+Gemfile*.lock
+
+.bundle/
+
 .DS_Store
 **/*.swp
-*.gem
 rdoc/
-Gemfile.lock
 spec/dummy/tmp
 spec/dummy/log
-*.sublime-workspace

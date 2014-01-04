@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get "/instance_var_test" => "test#instance_var_test"
   get "/yield_block_in_helper_test" => "test#yield_block_in_helper_test"
   get "/filename_test" => "test#filename_test"
+  root :to => "test#index"
 end
