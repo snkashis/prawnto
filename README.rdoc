@@ -1,6 +1,6 @@
 = Prawnto (prawnto_2)
 
-{<img src="https://secure.travis-ci.org/GetJobber/prawnto.png" />}[http://travis-ci.org/GetJobber/prawnto]
+{<img src="https://secure.travis-ci.org/GetJobber/prawnto.png" />}[http://travis-ci.org/GetJobber/prawnto] {<img src="https://codeclimate.com/github/GetJobber/prawnto.png" />}[https://codeclimate.com/github/GetJobber/prawnto]
 
 A rails plugin providing templating abilities for generating pdf files leveraging the kick-ass prawn library (http://prawn.majesticseacreature.com/)
 
