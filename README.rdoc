@@ -88,8 +88,8 @@ Limited partial support is available. Check out the wiki for details.
 Tests can be ran against different versions of Rails like so:
 
 <code>
-BUNDLE_GEMFILE=spec/gemfiles/Gemfile.rails-3.2.x bundle install
-BUNDLE_GEMFILE=spec/gemfiles/Gemfile.rails-3.2.x bundle exec rspec spec
+BUNDLE_GEMFILE=spec/gemfiles/Gemfile.rails-4.2.x bundle install
+BUNDLE_GEMFILE=spec/gemfiles/Gemfile.rails-4.2.x bundle exec rspec spec
 </code>
 
 ---
